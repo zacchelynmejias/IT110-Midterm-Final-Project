@@ -11,8 +11,14 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/validation.js"></script>
+
 	</head>
-	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+	<body class="img js-fullheight" style="background-image: url(images/backg.jpg);">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -25,17 +31,24 @@
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Have an account?</h3>
 
-		      	<form action="" class="signin-form" method="post" onsubmit="return validateform()">
-		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Username" required>
+
+		      	<form action="#" class="login-form">
+
+		      		<div class="form-group" method="post" onsubmit="return validateform()">
+		      			<input type="text" class="form-control" id="username" placeholder="Username" required>
+						<span class="error" id="usernameError"></span>
 		      		</div>
-	            <div class="form-group">
-	              <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+
+	            <div class="form-group" method="post" onsubmit="return validateform()">
+	              <input id="password" type="password" class="form-control" placeholder="Password" required>
 	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+				  <span class="error" id="passwordError"></span>
 	            </div>
+
 	            <div class="form-group">
-	            	<button type="submit" class="form-control btn btn-primary submit px-3" onclick="validateform()">Login</button>
+	            	<button type="button" class="form-control btn btn-primary submit px-3" onclick="validateform()">Login</button>
 	            </div>
+
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
 		            	<label class="checkbox-wrap checkbox-primary">Remember Me
@@ -48,6 +61,7 @@
 								</div>
 	            </div>
 	          </form>
+
 	          <p class="w-100 text-center">&mdash; Or Login With &mdash;</p>
 	          <div class="social d-flex text-center">
 	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
@@ -59,10 +73,7 @@
 		</div>
 	</section>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+
   
 	</body>
 </html>
