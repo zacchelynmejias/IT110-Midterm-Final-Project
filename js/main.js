@@ -1,74 +1,31 @@
-function validateform(){
+(function($) {
 
-	const username = document.getElementById("username").value;
-	const password = document.getElementById("password").value;
-	
-	const usernameRegex = /^[a-zA-Z0-9_]+$/;
-	const passwordRegex =  /^[A-Za-z]\w{7,14}$/;
+	"use strict";
 
-	const isValid = true;
+	var fullHeight = function() {
 
-	try {
-		if (!username.match(usernameRegex)) {
-			alert("Invalid username format. Please use only letters, numbers, and underscores.");
-			isValid = false;
-		} else {
-			document.getElementById("usernameError").innerHTML = "";
-		}
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
 
-		// Validate password
-		if (!password.match(passwordRegex)) {
-			alert("Invalid format. Please use letters and numbers only.");
-			isValid = false;
-		} else {
-			document.getElementById("passwordError").innerHTML = "";
-		}
-		// console.log(z);
-
-	} catch (error) {
-		alert(error.message);
-		isValid = false;
-		
-	} finally {
-	   }
-
-		if (isValid) {
-			window.location.href = "dashboard.html";
-		}
-
-		return isValid;
-
-}  
+	};
+	fullHeight();
 
 
-// (function($) {
+	$(".toggle-password").click(function() {
 
-// 	"use strict";
+	  $(this).toggleClass("fa-eye fa-eye-slash");
+	  var input = $($(this).attr("toggle"));
 
-// 	var fullHeight = function() {
+	  if (input.attr("type") == "password") {
+	    input.attr("type", "text");
+	  } else {
+	    input.attr("type", "password");
+	  }  
+	});
 
-// 		$('.js-fullheight').css('height', $(window).height());
-// 		$(window).resize(function(){
-// 			$('.js-fullheight').css('height', $(window).height());
-// 		});
-
-// 	};
-// 	fullHeight();
-
-
-// 	$(".toggle-password").click(function() {
-
-// 	  $(this).toggleClass("fa-eye fa-eye-slash");
-// 	  var input = $($(this).attr("toggle"));
-
-// 	  if (input.attr("type") == "password") {
-// 	    input.attr("type", "text");
-// 	  } else {
-// 	    input.attr("type", "password");
-// 	  }  
-// 	});
+})(jQuery);
 
 
-
-// })(jsQuery);
 
