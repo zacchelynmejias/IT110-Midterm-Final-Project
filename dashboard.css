@@ -5,7 +5,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 a:hover {
     color: rgb(179, 179, 179);
@@ -15,7 +15,7 @@ a:hover {
     padding: 0.5em 1em;
     display: flex;
     justify-content: space-between;
-    background-color: #a129a1;
+    background-color: #fbceb5;
 }
 .site-identity h1 {
     font-size: 1.5em;
@@ -37,7 +37,7 @@ a:hover {
 
 .icon-bar {
     width:45%; /* Full-width */
-    background-color: #a129a1; /* Dark-grey background */
+    background-color: #fbceb5; /* Dark-grey background */
     overflow: auto; /* Overflow due to float */
     margin-left: 36%;
   }
@@ -48,16 +48,16 @@ a:hover {
     width: 18%; /* Equal width (5 icons with 20% width each = 100%) */
     padding: 12px 0; /* Some top and bottom padding */
     transition: all 0.3s ease; /* Add transition for hover effects */
-    color: white; /* White text color */
+    color: black; /* White text color */
     font-size: 26px; /* Increased font size */
   }
   
   .icon-bar a:hover {
-    background-color: #000; /* Add a hover color */
+    background-color: #ffb58c; /* Add a hover color */
   }
   
   .active {
-    background-color: #04AA6D; /* Add an active/current color */
+    background-color: #fbceb5; /* Add an active/current color */
   }
 
 
@@ -65,12 +65,13 @@ a:hover {
     display: inline-block;
     cursor: pointer;
     margin-top: 1%;
+    margin-left: -49px;
   }
   
   .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #ffffff;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -88,6 +89,26 @@ a:hover {
     transform: translate(0, -11px) rotate(45deg);
   }
 
+  /* Style for the logout button container */
+#logout-button-container {
+  text-align: center;
+  margin-top: 10px; /* Adjust this margin to control the vertical spacing */
+  
+}
+
+/* Style for the logout button */
+#logout-button-container button {
+  background-color: #f44336; /* Red background color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#logout-button-container button:hover {
+  background-color: #D32F2F; /* Slightly darker red for hover effect */
+}
 
 
 @media screen and (max-width: 500px) {
@@ -100,6 +121,13 @@ a:hover {
       float: none;
     }
   } 
+
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; 
+    } 
+  }
+
 
 
         
