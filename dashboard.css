@@ -37,7 +37,7 @@ a:hover {
 
 .icon-bar {
     width:45%; /* Full-width */
-    background-color: #fbceb5; /* Dark-grey background */
+    background-color: #fbceb5; /* background */
     overflow: auto; /* Overflow due to float */
     margin-left: 36%;
   }
