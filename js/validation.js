@@ -32,7 +32,7 @@ function validateform(){
 	   }
        
        if (isValid) {
-        window.location.href = "dashboard.html";
+        window.location.href = "Dashboard/index.html";
     }
 
     return isValid;
